@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Tabs</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".tab-nav li a").click(function() {
+                ids = $(this).attr('href');
+                console.log(ids);
+                $(".tab-nav li a").removeClass('active')
+                $(this).addClass('active');
+                $('.tab__content').slideUp();
+                $(ids).slideDown();
+            });
+        });
+    </script>
+</head>
+<style>
+    .tab-nav {
+        list-style: none;
+        display: flex;
+    }
+    
+    .tab-nav li a {
+        padding: 20px;
+        background-color: aqua;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    
+    .tab-nav li a:hover {
+        background-color: #fafafa;
+    }
+    
+    .tab-nav li a.active {
+        background-color: #fafafa;
+    }
+    
+    .tab__content {
+        display: none;
+        background-color: bisque;
+    }
+    
+    #tab1 {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="tab-wrap">
+        <ul class="tab-nav">
+            <li><a href="#tab1" class="active">Android</a></li>
+            <li><a href="#tab2">CSS</a></li>
+            <li><a href="#tab3">AngularJS</a></li>
+        </ul>
+
+        <div id="tab1" class="tab__content">
+            <p>Android is an open source and Linux-based operating system for mobile devices such as smartphones and tablet computers. Android was developed by the Open Handset Alliance, led by Google, and other companies.</p>
+        </div>
+
+        <div id="tab2" class="tab__content">
+            <p>CSS is the acronym for "Cascading Style Sheet". This tutorial covers both the versions CSS1,CSS2 and CSS3, and gives a complete understanding of CSS,starting from its basics to advanced concepts.
+            </p>
+        </div>
+
+        <div id="tab3" class="tab__content">
+            <p>AngularJS is a very powerful JavaScript library. It is used in Single Page Application (SPA) projects. It extends HTML DOM with additional attributes and makes it more responsive to user actions. AngularJS is open source,completely free, and
+                used by thousands of developers around the world. It is licensed under the Apache license version 2.0.</p>
+        </div>
+    </div>
+</body>
+
+</html>

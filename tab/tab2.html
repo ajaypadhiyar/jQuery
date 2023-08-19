@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".tab__nav li a").click(function() {
+                ids = $(this).attr('href');
+                console.log(ids);
+                $(".tab__nav li a").removeClass('active')
+                $(this).addClass('active')
+                $('.tab__content').slideUp();
+                $(ids).slideDown();
+            });
+        });
+    </script>
+</head>
+<style>
+    .tab__nav {
+        display: flex;
+        list-style: none;
+    }
+    
+    .tab__nav li a {
+        padding: 15px 30px;
+        text-decoration: none;
+        color: blueviolet;
+        background-color: bisque;
+    }
+    
+    .tab__nav li a:hover {
+        background-color: #fbfbfb;
+        color: aqua;
+    }
+    
+    .tab__nav li a.active {
+        background-color: #fbfbfb;
+        color: aqua;
+    }
+    
+    #tab1 {
+        display: block;
+    }
+    
+    .tab__content {
+        display: none;
+        background-color: #ecf2f6;
+        padding: 20px 50px;
+    }
+</style>
+
+<body>
+    <div class="nav-wrap">
+        <ul class="tab__nav">
+            <li><a href="#tab1" class="active">Home</a></li>
+            <li><a href="#tab2">Blog</a></li>
+            <li><a href="#tab3">Servise</a></li>
+            <li><a href="#tab4">About</a></li>
+        </ul>
+        <div class="tab__content" id="tab1">
+            <h2>tab-1</h2>
+
+            <p>We build great websites with intense care and real passion that your customers will love. Team of our experts helps you to get new, exclusive and innovative ways to grow. Having worked with a wide range of industries we create a digital foothold
+                for you in today’s cutthroat competitive market.</p>
+        </div>
+        <div class="tab__content" id="tab2">
+            <h2>tab-2</h2>
+
+            <p>We build great websites with intense care and real passion that your customers will love. Team of our experts helps you to get new, exclusive and innovative ways to grow. Having worked with a wide range of industries we create a digital foothold
+                for you in today’s cutthroat competitive market.</p>
+        </div>
+        <div class="tab__content" id="tab3">
+            <h2>tab-3</h2>
+
+            <p>We build great websites with intense care and real passion that your customers will love. Team of our experts helps you to get new, exclusive and innovative ways to grow. Having worked with a wide range of industries we create a digital foothold
+                for you in today’s cutthroat competitive market.</p>
+        </div>
+        <div class="tab__content" id="tab4">
+            <h2>tab-4</h2>
+
+            <p>We build great websites with intense care and real passion that your customers will love. Team of our experts helps you to get new, exclusive and innovative ways to grow. Having worked with a wide range of industries we create a digital foothold
+                for you in today’s cutthroat competitive market.</p>
+        </div>
+    </div>
+</body>
+
+</html>

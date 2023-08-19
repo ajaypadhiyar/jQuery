@@ -1,0 +1,10 @@
+.slider2__img {
+    background: #c4b6b6;
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.slider2 img {
+    max-height: 300px;
+}

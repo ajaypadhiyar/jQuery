@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".p").hide();
+            });
+
+            $("h2").click(function() {
+                $(".b").toggle();
+            });
+            $("h3").click(function() {
+                $(".c").toggle();
+            });
+
+            $("#h4").mouseenter(function() {
+                alert("You entered h4!");
+            });
+
+            $(".center").mouseleave(function() {
+                alert("You leave h4!");
+            });
+
+            $(".up").mouseup(function() {
+                alert("You up h4!");
+            });
+
+            $(".leave").mouseleave(function() {
+                alert("Bye! You now leave h4!");
+            });
+            $(".fade").click(function() {
+                $(".p1").fadeToggle();
+                $(".p2").fadeToggle("slow");
+                $(".p3").fadeToggle(3000);
+            });
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+            $(".animation").click(function() {
+                $(".ani").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            })
+        });
+    </script>
+</head>
+<style>
+    * {
+        text-align: center;
+    }
+    
+    h2 {
+        background-color: antiquewhite;
+    }
+    
+    .bg {
+        background-color: aquamarine;
+        border-radius: 16px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    
+    .color___green {
+        color: green;
+    }
+    
+    #panel,
+    #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+        padding: 50px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>This is heading</h1>
+        <p class="p">This is a paragraph.</p>
+        <p class="p">This is another paragraph.</p>
+        <button>click me</button>
+
+        <h2>This is heading</h2>
+        <p class="b">Hemchandracharya North Gujarat University is a public university in Patan, Gujarat, India. The geographical jurisdiction of the North Gujarat University encompasses four districts: Aravalli_district, Banaskantha, Mehsana, Patan and Sabarkantha.
+            It is NAAC 'A' accredited state university with a CGPA of 3.02. Wikipedia</p>
+    </div>
+    <div class="bg">
+        <h3>heading</h3>
+        <hr>
+        <p class="c">Hemchandracharya North Gujarat University is a public university in Patan, Gujarat, India. The geographical jurisdiction of the North Gujarat University encompasses four districts: Aravalli_district, Banaskantha, Mehsana, Patan and Sabarkantha.
+            It is NAAC 'A' accredited state university with a CGPA of 3.02. Wikipedia</p>
+
+    </div>
+    <div>
+        <h4 id="h4">heading</h4>
+
+        <h4 class="center bg">heading</h4>
+
+        <h4 class="up">heading</h4>
+
+        <h4 class="leave bg">heading</h4>
+    </div>
+    <div>
+        <button class="fade">Click to fade in boxes</button>
+        <p style="background-color: black; width:100px; height: 100px; " class="p1 "></p>
+        <p style="background-color: greenyellow; width:100px; height: 100px; " class="p2 "></p>
+        <p style="background-color: gray; width:100px; height: 100px; " class="p3 "></p>
+
+    </div>
+    <div>
+        <p id="flip">Click to slide down panel</p>
+        <p id="panel">Hello world!</p>
+
+        <button class="animation">Start Animation</button>
+        <p width="100px" hight="100px" style="background-color: green; position: absolute;" class="ani"></p>
+    </div>
+</body>
+
+</html>

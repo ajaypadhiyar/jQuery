@@ -1,0 +1,51 @@
+.bg--pink h1 {
+    background-color: antiquewhite;
+    margin-top: 180px;
+}
+
+.bg--pink p {
+    background-color: rgb(182, 123, 47);
+    margin-bottom: 180px;
+}
+
+.bg--pink {
+    /* background-color: pink; */
+}
+
+.a {
+    background-color: aquamarine;
+    margin-bottom: 50px;
+    padding: 50px 90px;
+    font-size: 80px;
+    max-width: 30%;
+    margin-right: auto;
+    border: 10px solid yellow;
+}
+
+.b {
+    text-align: center;
+    font-size: 80px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+
+.bg--green {
+    background-color: green;
+    margin-bottom: 50px;
+    padding: 50px 90px;
+    font-size: 80px;
+    max-width: 30%;
+    margin-left: auto;
+    border: 10px solid brown;
+}
+
+div {
+    font-size: 50px;
+    text-align: center;
+}
+
+[data-aos][data-aos][data-aos-duration="400"],
+body[data-aos-duration="400"] [data-aos] {
+    transition-duration: 1.4s
+}

@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100vh;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+    margin: 0;
+}
+
+.type-wrap {
+    font-size: 50px;
+    padding: 20px;
+}
+
+
+/* the above is for styling puposes only */
+
+
+/* .typed-cursor {
+    animation: typing 0.7s infinite;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */

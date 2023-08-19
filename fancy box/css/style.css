@@ -1,0 +1,13 @@
+#gallery {
+    background: #000;
+}
+
+.light {
+    background-color: antiquewhite;
+}
+
+img {
+    max-width: 400px;
+    max-height: 300px;
+    margin: 30px;
+}

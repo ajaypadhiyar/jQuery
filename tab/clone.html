@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    p {
+        font-size: 20px;
+        color: rgb(23, 21, 20);
+    }
+</style>
+
+<body>
+    <div>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+
+        <button>Clone all p elements, and append them to the body element</button>
+
+    </div>
+
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").clone().appendTo("body");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".accordian--block h2").click(function() {
+                $(this).toggleClass('active');
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+    <style>
+        .accordian--block {
+            position: relative;
+        }
+        
+        .accordian--block h2 {
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .accordian--block h2:hover {
+            background-color: #ccc;
+        }
+        
+        .accordian--block h2.active {
+            background-color: #ccc;
+        }
+        
+        .accordian__content {
+            display: none;
+            padding: 20px;
+        }
+        
+        .accordian__content p {
+            font-size: 18px;
+        }
+        
+        .accordian--block h2::after {
+            position: absolute;
+            content: "";
+            top: 20px;
+            right: 20px;
+            width: 10px;
+            height: 3px;
+            background-color: blue;
+            transform: rotate(-50deg);
+        }
+        
+        .accordian--block h2::before {
+            position: absolute;
+            content: "";
+            top: 16px;
+            right: 30px;
+            width: 3px;
+            height: 10px;
+            background-color: black;
+            z-index: 1;
+            transform: rotate(-50deg);
+        }
+        
+        .accordian--block .active::after {
+            transform: rotate(90deg);
+        }
+        
+        .accordian--block .active::before {
+            transform: rotate(100deg);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="accordian--block">
+        <h2>section-1</h2>
+        <div class="accordian__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        </div>
+    </div>
+
+    <div class="accordian--block">
+        <h2>section-2</h2>
+        <div class="accordian__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        </div>
+    </div>
+
+    <div class="accordian--block">
+        <h2>section-3</h2>
+        <div class="accordian__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
