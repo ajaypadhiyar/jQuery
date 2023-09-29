@@ -879,14 +879,6 @@ textarea.form-control {
     background: var(--Orange-Gradient, linear-gradient(112deg, var(--orange-color) 25.77%, #FF8906 88.77%));
 }
 
-.navbar li:last-child a:hover:after {
-    display: none;
-}
-
-.navbar li a:hover {
-    color: #000;
-}
-
 .fixed-header {
     position: fixed;
     top: 0;
