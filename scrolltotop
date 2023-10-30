@@ -32,3 +32,39 @@ $('.scrolltotop').click(function() {
                             }
 
 <a href="#" class="scrolltotop"></a>
+
+
+sticy header
+
+  .site--header {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                z-index: 10;
+                            }
+
+   header.sticky {
+                                background-color: #000103;
+                                animation: headerSticky .95s ease forwards;
+                            }
+                            
+                            @keyframes headerSticky {
+                                0% {
+                                    transform: translateY(-100%);
+                                }
+                                100% {
+                                    transform: translateY(0%);
+                                }
+                            }
+
+js
+
+    $(window).scroll(function() {
+        // console.log(windowpos + '--' + pos) ;
+        if ($(this).scrollTop() > 550) {
+            $('.site--header').addClass("sticky");
+        } else {
+            $('.site--header').removeClass("sticky");
+        }
+    });
